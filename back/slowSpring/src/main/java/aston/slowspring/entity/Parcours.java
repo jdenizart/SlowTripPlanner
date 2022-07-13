@@ -7,16 +7,19 @@ import java.util.List;
 @Entity
 @Table(name = "parcours")
 public class Parcours {
+
+    // Attributs
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique=true, nullable=false)
     private Long parcours_id;
-    @Column
+    @Column(nullable=false, length=100)
     private String nomParcours;
-    @Column
+    @Column(length=255)
     private String description;
-    @Column
+    @Column(length=100)
     private String image;
-    @Column
+    @Column(nullable=false)
     private Date dateDepart;
 
     @Column

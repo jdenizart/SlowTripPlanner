@@ -7,16 +7,18 @@ import java.util.Date;
 public class Balise {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique=true, nullable=false)
     private Long balise_id;
-    @Column
+    @Column(nullable = false, length = 45)
     private String nomBalise;
-    @Column
+    @Column(nullable = false)
     private Date dateTime;
-    @Column
+    @Column(nullable = false)
     private Double distance;
-    @Column
+    @Column(nullable = false)
     private boolean estVerouille;
     @ManyToOne
+    @JoinColumn(name = "Parcours_parcours_id", nullable = false)
     private Parcours parcours;
 
     @OneToOne
