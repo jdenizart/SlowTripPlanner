@@ -7,6 +7,9 @@ import { ParcoursComponent } from './pages/parcours/parcours.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { DateComponent } from './pages/parcours/components/date/date.component';
 import { BaliseComponent } from './pages/parcours/components/balise/balise.component';
+import { PreferencesComponent } from './pages/preferences/preferences.component';
+import { LocomotionComponent } from './pages/preferences/components/locomotion/locomotion.component';
+import { DifficulteComponent } from './pages/preferences/components/difficulte/difficulte.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { BaliseComponent } from './pages/parcours/components/balise/balise.compo
     ParcoursComponent,
     CalendarComponent,
     DateComponent,
-    BaliseComponent
+    BaliseComponent,
+    PreferencesComponent,
+    LocomotionComponent,
+    DifficulteComponent
   ],
   imports: [
     BrowserModule,
