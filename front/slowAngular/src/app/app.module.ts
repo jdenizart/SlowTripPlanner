@@ -10,6 +10,7 @@ import { BaliseComponent } from './pages/parcours/components/balise/balise.compo
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { LocomotionComponent } from './pages/preferences/components/locomotion/locomotion.component';
 import { DifficulteComponent } from './pages/preferences/components/difficulte/difficulte.component';
+import { SidebarComponent } from './pages/parcours/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DifficulteComponent } from './pages/preferences/components/difficulte/d
     BaliseComponent,
     PreferencesComponent,
     LocomotionComponent,
-    DifficulteComponent
+    DifficulteComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
