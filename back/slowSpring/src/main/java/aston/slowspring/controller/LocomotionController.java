@@ -1,8 +1,7 @@
 package aston.slowspring.controller;
 
-import aston.slowspring.entity.Balise;
+
 import aston.slowspring.entity.Locomotion;
-import aston.slowspring.services.BaliseService;
 import aston.slowspring.services.LocomotionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -47,10 +46,10 @@ public class LocomotionController {
             return this.locomotionService.update(locomotion);
         }
 
-        @DeleteMapping("/{balise_id}")
+        @DeleteMapping("/{locomotion_id}")
         @ResponseStatus(code=HttpStatus.ACCEPTED)
-        public Balise delete(@PathVariable Long balise_id) {
-            return this.locomotionService.delete(balise_id);
+        public Locomotion delete(@PathVariable Long locomotion_id) {
+            return this.locomotionService.delete(locomotion_id);
         }
 
     }
