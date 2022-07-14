@@ -9,4 +9,5 @@ public interface BaliseRepo extends JpaRepository<Balise,Long> {
     List<Balise> findByNomBalise(String nomBalise);
 
     List<Balise> findByDateTime(String dateTime);
+
 }
