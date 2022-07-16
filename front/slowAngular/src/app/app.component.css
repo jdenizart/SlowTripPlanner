@@ -1,6 +1,19 @@
+
 mat-sidenav-container {
     height: 100%;
+    color:#474747;
 }
+
+mat-sidenav {
+    width: auto;
+    background-color: #e6e6e6;
+}
+
+#bodycontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 mat-sidenav,mat-sidenav-content {
     padding: 16px;
