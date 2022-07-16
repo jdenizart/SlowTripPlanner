@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 // API reference for Angular Material
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list'; 
+import {MatTreeModule} from '@angular/material/tree';
+import {MatButtonModule} from '@angular/material/button'; 
 import {MatExpansionModule, MatAccordion} from '@angular/material/expansion'; 
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
@@ -46,6 +48,8 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
     // Angular Material Imports
     MatSidenavModule,
     MatListModule,
+    MatTreeModule,
+    MatButtonModule,
     MatExpansionModule,
     MatIconModule,
     MatDatepickerModule,
