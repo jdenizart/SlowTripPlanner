@@ -11,8 +11,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatButtonModule} from '@angular/material/button';
 // Body calls
-import {MatGridListModule} from '@angular/material/grid-list'; 
-import {MatExpansionModule, MatAccordion} from '@angular/material/expansion'; 
+import {MatExpansionModule, MatAccordion} from '@angular/material/expansion';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 
@@ -49,15 +49,16 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
     BrowserAnimationsModule,
     FormsModule,
     // Angular Material Imports
+    MatIconModule,
     // Sidenav
     MatSidenavModule,
     MatListModule,
     MatTreeModule,
     MatButtonModule,
     // Body
-    MatGridListModule,
+    // Calendrier > Date & Balise
     MatExpansionModule,
-    MatIconModule,
+    MatFormFieldModule,
     MatDatepickerModule,
   ],
   providers: [],
