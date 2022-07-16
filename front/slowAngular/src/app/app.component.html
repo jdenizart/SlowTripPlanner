@@ -1,18 +1,37 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" [(opened)]="opened">
+        Sidenav content
+        <app-sidebar>
+
+        </app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+            <button (click)="opened=!opened">Toggle</button>
+        <div>
+            <app-preferences>
+        
+            </app-preferences>
+            
+            <app-parcours>
+            
+            </app-parcours>
+        </div>
+        <div>              
+            <app-map>
+                
+            </app-map>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 <app-sidebar>
 
 </app-sidebar>
 
-<app-preferences>
 
-</app-preferences>
-
-<app-parcours>
-
-</app-parcours>
-
-<app-map>
   
-</app-map>
+
+
+
 
 
 <router-outlet></router-outlet>

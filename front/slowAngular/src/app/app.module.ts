@@ -1,8 +1,15 @@
-import { Component, ViewChild, NgModule } from '@angular/core';
+
+// Import de FormsModule pour faire fonctionner angular Material
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {
-  MatExpansionModule,
-  } from '@angular/material/expansion';
+import { FormsModule } from '@angular/forms';
+
+// API reference for Angular Material
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list'; 
+import {MatExpansionModule, MatAccordion} from '@angular/material/expansion'; 
+import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +24,7 @@ import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './pages/parcours/components/map/map.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +36,19 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
     LocomotionComponent,
     DifficulteComponent,
     SidebarComponent,
-    MapComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    // Angular Material Imports
+    MatSidenavModule,
+    MatListModule,
     MatExpansionModule,
+    MatIconModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
