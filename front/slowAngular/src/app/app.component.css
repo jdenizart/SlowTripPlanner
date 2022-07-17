@@ -14,7 +14,6 @@ mat-sidenav {
     justify-content: space-between;
 }
 
-
 mat-sidenav,mat-sidenav-content {
     padding: 16px;
 }
