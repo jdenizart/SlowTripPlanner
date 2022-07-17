@@ -12,6 +12,11 @@ import {MatListModule} from '@angular/material/list';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatButtonModule} from '@angular/material/button';
 // Body calls
+// Preferences
+  // Locomotion
+import {MatButtonToggleModule} from '@angular/material/button-toggle'; 
+  // Difficulte
+import {MatRadioModule} from '@angular/material/radio'; 
 // Calendar
 //Datepicker
 import {MatInputModule} from '@angular/material/input'; 
@@ -64,6 +69,9 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
     MatTreeModule,
     MatButtonModule,
     // Body
+    // Preferences
+    MatButtonToggleModule,
+    MatRadioModule,
     // Calendrier > Date & Balise
     MatExpansionModule,
     MatDatepickerModule,
