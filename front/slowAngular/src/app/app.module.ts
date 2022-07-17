@@ -2,6 +2,7 @@
 // Import de FormsModule pour faire fonctionner angular Material
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // API reference for Angular Material
@@ -17,6 +18,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 import {MatNativeDateModule } from '@angular/material/core';
+// Balise
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
 // Calendar & Balise
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
@@ -31,7 +34,6 @@ import { PreferencesComponent } from './pages/parcours/components/preferences/pr
 import { LocomotionComponent } from './pages/parcours/components/preferences/components/locomotion/locomotion.component';
 import { DifficulteComponent } from './pages/parcours/components/preferences/components/difficulte/difficulte.component';
 import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './pages/parcours/components/map/map.component';
 
 
@@ -46,7 +48,7 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
     LocomotionComponent,
     DifficulteComponent,
     SidebarComponent,
-    MapComponent
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    MatInputModule, 
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
