@@ -25,6 +25,16 @@ public class Balise {
     public Balise() {
     }
 
+    public Balise(Long balise_id, String nomBalise, Date dateTime, Double distance, boolean estVerouille, Parcours parcours, Point point) {
+        this.balise_id = balise_id;
+        this.nomBalise = nomBalise;
+        this.dateTime = dateTime;
+        this.distance = distance;
+        this.estVerouille = estVerouille;
+        this.parcours = parcours;
+        this.point = point;
+    }
+
     public Long getBalise_id() {
         return balise_id;
     }
