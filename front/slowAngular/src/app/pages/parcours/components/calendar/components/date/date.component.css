@@ -1,5 +1,25 @@
+.mat-expansion-panel{
+    background-color: #00be7f;
+}
+
 .mat-expansion-panel-header{
     margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 5px;
 }
+
+.mat-datepicker-toggle-active{
+    color:#00583b;
+}
+
+.mat-calendar-body-cell-content.mat-focus-indicator {
+
+    position: absolute;
+
+}
+
+.mat-form-field-active {
+    color:#039766;
+}
+
+

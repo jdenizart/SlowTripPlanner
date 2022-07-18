@@ -1,7 +1,6 @@
-.mat-expansion-panel-header{
-    margin-top: 20px;
-}
-
-.checkbox{
-    margin-right: 20px;
+.balise{
+    width: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

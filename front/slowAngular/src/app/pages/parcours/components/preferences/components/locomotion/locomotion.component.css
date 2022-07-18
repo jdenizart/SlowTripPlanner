@@ -1,0 +1,16 @@
+.mat-button-toggle-group{
+    margin-bottom: 20px;
+}
+
+.mat-button-toggle-appearance-standard{
+    background-color: #e6e6e6;
+    color:#474747;
+}
+
+.mat-button-toggle-appearance-standard:hover{
+    background-color: #01fca8;
+}
+
+.mat-button-toggle-checked{
+    background-color: #00be7f;
+}
