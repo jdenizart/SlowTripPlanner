@@ -15,15 +15,17 @@ public class LocomotionService {
     }
 
     public List<Locomotion> findByLibeleloco(String libeleloco) {
-        return null;
+
+        return this.locomotionRepo.findByLibeleLoco(libeleloco);
     }
 
     public Locomotion create(Locomotion newLocomotion) {
-        return newLocomotion;
+        return this.locomotionRepo.save(newLocomotion);
+
     }
 
     public Locomotion update(Locomotion locomotion) {
-        return locomotion;
+        return this.locomotionRepo.save();
     }
 
     public Locomotion delete(Long locomotion_id) {
