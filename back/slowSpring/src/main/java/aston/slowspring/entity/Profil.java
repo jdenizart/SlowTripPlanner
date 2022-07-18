@@ -8,26 +8,35 @@ import java.util.List;
 public class Profil {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique=true, nullable=false)
     private Long profil_id;
-    @Column
+    @Column(nullable=false, length=45)
     private String pseudo;
-    @Column
+    @Column(length=200)
     private String photo_profil;
-    @Column
+    @Column(length=255)
     private String devise;
-    @OneToMany
-    private List<Parcours> parcours;
-    @OneToMany
-    private List<Preference> preferences;
 
+    // table reliée à celle de Parcours en 1 to many
+    @OneToMany(mappedBy="profil")
+    private List<Parcours> parcours;
+
+    // Contructeurs
     public Profil() {
     }
 
-    public Profil(Long profil_id, String pseudo, String photo_profil) {
+    public Profil(Long profil_id, String pseudo, String photo_profil, String devise) {
         this.profil_id = profil_id;
         this.pseudo = pseudo;
         this.photo_profil = photo_profil;
+        this.devise = devise ;
     }
+
+    public Profil(String pseudo) {
+        this.pseudo = pseudo;
+    }
+
+    // Getters & Setters
 
     public Long getProfil_id() {
         return profil_id;
@@ -53,6 +62,22 @@ public class Profil {
         this.photo_profil = photo_profil;
     }
 
+    public String getDevise() {
+        return devise;
+    }
+
+    public void setDevise(String devise) {
+        this.devise = devise;
+    }
+
+    public List<Parcours> getParcours() {
+        return parcours;
+    }
+
+    public void setParcours(List<Parcours> parcours) {
+        this.parcours = parcours;
+    }
+
     @Override
     public String toString() {
         return "Profil{" +
@@ -60,5 +85,18 @@ public class Profil {
                 ", pseudo='" + pseudo + '\'' +
                 ", photo_profil='" + photo_profil + '\'' +
                 '}';
+    }
+
+    // METHODES
+    // ajouter ou retirer un parcours à la liste
+    public Parcours addParcours(Parcours parcours) {
+        getParcours().add(parcours);
+        parcours.setLocomotion(this);
+        return parcours;
+    }
+    public Parcours removeParcours(Parcours parcours) {
+        getParcours().remove(parcours);
+        parcours.setLocomotion(null);
+        return parcours;
     }
 }

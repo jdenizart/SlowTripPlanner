@@ -12,7 +12,7 @@ public class Point {
     @Column(unique=true, nullable=false)
     private int point_id;
 
-    @Column(nullable=false, length=50)
+    @Column(nullable=false, length=100)
     private String etiquette;
     @Column
     @Column(nullable=false, length=12)
@@ -21,6 +21,7 @@ public class Point {
     @Column(nullable=false, length=12)
     private String Latitude;
 
+    // table reliée à la table point en 1 to 1
     @OneToOne(mappedBy="point")
     private Balise balise;
 
@@ -29,12 +30,10 @@ public class Point {
     public Point() {
     }
 
-    public Point(int point_id, String etiquette, String longitude, String latitude, Balise balise) {
-        this.point_id = point_id;
+    public Point(String etiquette, String longitude, String latitude) {
         this.etiquette = etiquette;
         Longitude = longitude;
         Latitude = latitude;
-        this.balise = balise;
     }
 
     public Point(String etiquette, String longitude, String latitude, Balise balise) {

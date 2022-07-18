@@ -17,25 +17,40 @@ public class Parcours {
     private String nomParcours;
     @Column(length=255)
     private String description;
-    @Column(length=100)
+    @Column(length=200)
     private String image;
     @Column(nullable=false)
     private Date dateDepart;
-
-    @Column
+    @Column(nullable=false)
     private int nombreJour;
+
+    // Table reliée aux tables suivantes:
     @OneToMany(mappedBy = "parcours", fetch = FetchType.LAZY)
     private List<Balise> balises;
+
     @ManyToOne
+    @JoinColumn(name="Profil_profil_id", nullable=false)
     private Profil profil;
+
+    // dans une relation one to one, on met le join column dand la table où on veut la clé étrangere, et dnas l'autre on met mappedBY
     @OneToOne
+    @JoinColumn(name="Preference_preference_id", nullable=false)
     private Preference preference;
+
     @ManyToOne
+    @JoinColumn(name="Locomotion_locomotion_id", nullable=false)
     private Locomotion locomotion;
 
+    // Constructeurs
     public Parcours() {
     }
+    public Parcours(String nomParcours, Date dateDepart, int nombreJour) {
+        this.nomParcours = nomParcours;
+        this.dateDepart = dateDepart;
+        this.nombreJour = nombreJour;
+    }
 
+    // Getters & Setters
     public Long getParcours_id() {
         return parcours_id;
     }
@@ -76,10 +91,6 @@ public class Parcours {
         this.dateDepart = dateDepart;
     }
 
-
-
-
-
     public int getNombreJour() {
         return nombreJour;
     }
@@ -99,4 +110,25 @@ public class Parcours {
                 ", nombreJour=" + nombreJour +
                 '}';
     }
+
+    // METHODES
+    // Jerome à retravailler!!!!!!!!
+    public Balise addBalise(Balise balise) {
+        getBalises().add(balise);
+        balise.setParcour(this);
+        return balise;
+    }
+    public Balise addBalisePosition(Balise balise, Long position) {
+        getBalises().add(position,balise);
+        balise.setParcour(this);
+        return balise;
+    }
+
+    public Balise removeBalise(Balise balise) {
+        getBalises().remove(balise);
+        balise.setParcour(null);
+        return balise;
+    }
+
+
 }

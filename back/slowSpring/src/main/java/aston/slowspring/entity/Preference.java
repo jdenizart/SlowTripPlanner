@@ -5,14 +5,41 @@ import javax.persistence.*;
 @Entity
 @Table(name = "preference")
 public class Preference {
+
+    // Attributs
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long preference_id;
     @Column
-    private int kilometrageEtapeMoyenne;
-   @ManyToOne
-   private Profil profil;
-   @OneToOne
-   private Parcours parcours;
+    private Double kilometrageEtapeMoyenne;
+    //  Table relié à celle du parcours (qui aura la clé étrangere)
+    @OneToOne(mappedBy="preference")
+    private Parcours parcours;
 
+    // Constructeurs
+    public Preference() {
+    }
+    public Preference(Double kilometrageEtapeMoyenne) {
+        this.kilometrageEtapeMoyenne = kilometrageEtapeMoyenne;
+    }
+
+    // Getters & Setters
+    public Long getPreference_id() {
+        return preference_id;
+    }
+    public void setPreference_id(Long preference_id) {
+        this.preference_id = preference_id;
+    }
+    public Double getKilometrageEtapeMoyenne() {
+        return kilometrageEtapeMoyenne;
+    }
+    public void setKilometrageEtapeMoyenne(Double kilometrageEtapeMoyenne) {
+        this.kilometrageEtapeMoyenne = kilometrageEtapeMoyenne;
+    }
+    public Parcours getParcours() {
+        return parcours;
+    }
+    public void setParcours(Parcours parcours) {
+        this.parcours = parcours;
+    }
 }
