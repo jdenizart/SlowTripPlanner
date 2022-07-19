@@ -5,25 +5,41 @@ import java.util.Date;
 @Entity
 @Table(name = "balise")
 public class Balise {
+
+    // Attributs
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long balise_id;
-    @Column
+    @Column(unique=true, nullable=false)
+    private Long balise_id;  // JEROME: homogénéité des noms bof (ici en serpent case eplus loin en camelcase)
+    @Column(nullable = false, length = 45)
     private String nomBalise;
-    @Column
-    private Date dateTime;
-    @Column
+    @Column(nullable = false)
+    private Date dateTime;  // JEROME: le nom n'est pas approprié, c'est une date seulement
+    @Column(nullable = false)
     private Double distance;
-    @Column
+    @Column(nullable = false)
     private boolean estVerouille;
-    @ManyToOne
-    private Parcours parcours;
 
+    // est relié aux tables:
+    @ManyToOne
+    @JoinColumn(name = "parcours_balise", nullable = false)
+    private Parcours parcours;
     @OneToOne
+    @JoinColumn(name = "point_balise", nullable = false)
     private Point point;
 
+    // contructeurs
     public Balise() {
     }
+    public Balise(String nomBalise, Date dateTime, Double distance, boolean estVerouille, Parcours parcours, Point point) {
+        this.nomBalise = nomBalise;
+        this.dateTime = dateTime;
+        this.distance = distance;
+        this.estVerouille = estVerouille;
+        this.parcours = parcours;
+        this.point = point;
+    }
+
 
     public Balise(Long balise_id, String nomBalise, Date dateTime, Double distance, boolean estVerouille, Parcours parcours, Point point) {
         this.balise_id = balise_id;
@@ -34,6 +50,9 @@ public class Balise {
         this.parcours = parcours;
         this.point = point;
     }
+
+
+    // getters & setters
 
     public Long getBalise_id() {
         return balise_id;
@@ -82,10 +101,6 @@ public class Balise {
     public void setParcours(Parcours parcours) {
         this.parcours = parcours;
     }
-
-
-
-
 
     public Point getPoint() {
         return point;
