@@ -1,3 +1,7 @@
+.dates{
+    width: 600px;
+}
+
 .mat-expansion-panel{
     background-color: #00be7f;
 }
@@ -43,4 +47,8 @@
 
 .add-balise:hover{
     background-color: #01fca8;
+}
+
+.bin:hover{
+    background-color: rgb(255, 33, 4);
 }

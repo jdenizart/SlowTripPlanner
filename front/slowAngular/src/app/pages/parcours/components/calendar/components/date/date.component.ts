@@ -14,7 +14,7 @@ const ADD =
   styleUrls: ['./date.component.css']
 })
 export class DateComponent {
-
+  dates = new Array();
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { 
     iconRegistry.addSvgIconLiteral('add', sanitizer.bypassSecurityTrustHtml(ADD));
   }
@@ -22,4 +22,13 @@ export class DateComponent {
 
   ngOnInit(): void {
   }
+
+  removevalue(i: number){
+    this.dates.splice(i,1);
+  }
+
+  addvalue(){
+    this.dates.push({value: ""});
+  }
+  
 }

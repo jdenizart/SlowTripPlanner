@@ -1,29 +1,33 @@
-<p>date works!</p>
+<div class="dates" *ngFor="let date of dates; let i = index">
+    <mat-accordion multi="true" >
+        <mat-expansion-panel class="formfield">
+            <mat-expansion-panel-header class="date"  >
+                <mat-panel-title>
+                    <mat-form-field  appearance="fill">
+                        <mat-label>Choisissez une date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                </mat-panel-title>
+                <mat-panel-description>
+                    Total Distance
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <app-balise>
+            </app-balise>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <button class="bin" mat-mini-fab>
+        <mat-icon (click)="removevalue(i)" class="icone" svgIcon="bin" aria-hidden="false" aria-label="bin icone"></mat-icon>
+    </button>
+</div>
 
-<mat-accordion multi="true">
-    <mat-expansion-panel class="formfield">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <mat-form-field  appearance="fill">
-                    <mat-label>Choisissez une date</mat-label>
-                    <input matInput [matDatepicker]="picker">
-                    <mat-hint>MM/DD/YYYY</mat-hint>
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                  </mat-form-field>
-            </mat-panel-title>
-            <mat-panel-description>
-                Total Distance
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <app-balise>
-        </app-balise>
-    </mat-expansion-panel>
-    <div class="boutonajout">
-        <button class="add-balise" mat-mini-fab>
-            <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
-        </button>
-    </div>
-</mat-accordion>
+<div class="boutonajout">
+    <button class="add-balise" mat-mini-fab (click)="addvalue()">
+        <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
+    </button>
+</div>
 
 

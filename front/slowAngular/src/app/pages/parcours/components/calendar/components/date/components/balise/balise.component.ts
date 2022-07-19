@@ -12,7 +12,9 @@ const BIN =
   templateUrl: './balise.component.html',
   styleUrls: ['./balise.component.css']
 })
+
 export class BaliseComponent implements OnInit {
+  balises = new Array();
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { 
     iconRegistry.addSvgIconLiteral('bin', sanitizer.bypassSecurityTrustHtml(BIN));
@@ -20,6 +22,14 @@ export class BaliseComponent implements OnInit {
 
 
   ngOnInit(): void {
+  }
+
+  removevalue(i: number){
+    this.balises.splice(i,1);
+  }
+
+  addvalue(){
+    this.balises.push({value: ""});
   }
 
 }

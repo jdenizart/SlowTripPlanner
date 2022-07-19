@@ -1,29 +1,18 @@
 
-<div class="balise">
+<div class="balises" *ngFor="let balise of balises; let i = index">
     <mat-checkbox class="checkbox"></mat-checkbox>
     <mat-form-field appearance="outline">
         <mat-label>Départ</mat-label>
-        <input matInput>
+        <input type="text" [(ngModel)]="balise.value" matInput>
     </mat-form-field>
     <p>Distance</p>
     <button class="bin" mat-mini-fab>
-        <mat-icon class="icone" svgIcon="bin" aria-hidden="false" aria-label="bin icone"></mat-icon>
+        <mat-icon (click)="removevalue(i)" class="icone" svgIcon="bin" aria-hidden="false" aria-label="bin icone"></mat-icon>
     </button>
 </div>
-<div class="buttonadd">
-    <button class="add-balise" mat-mini-fab>
+<div class="buttonadd" (click)="addvalue()" >
+    <button class="add-button" mat-mini-fab>
         <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
-    </button>
-</div>
-<div class="balise">
-    <mat-checkbox class="checkbox"></mat-checkbox>
-    <mat-form-field appearance="outline">
-        <mat-label>Arrivée</mat-label>
-        <input matInput>
-    </mat-form-field>
-    <p>Distance</p>
-    <button class="bin" mat-mini-fab>
-        <mat-icon class="icone" svgIcon="bin" aria-hidden="false" aria-label="bin icone"></mat-icon>
     </button>
 </div>
 

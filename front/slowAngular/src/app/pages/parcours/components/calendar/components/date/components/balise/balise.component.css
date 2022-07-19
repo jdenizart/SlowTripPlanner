@@ -1,4 +1,4 @@
-.balise{
+.balises{
     width: 550px;
     display: flex;
     justify-content: space-around;
@@ -10,7 +10,7 @@
     background-color: rgb(255, 33, 4);
 }
 
-.add-balise:hover{
+.add-button:hover{
     background-color: #1c6feccc;
 }
 

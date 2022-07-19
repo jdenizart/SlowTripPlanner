@@ -61,7 +61,6 @@ const CALENDAR =
 })
 
 export class CalendarComponent implements OnInit {
-
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { 
     iconRegistry.addSvgIconLiteral('calendar', sanitizer.bypassSecurityTrustHtml(CALENDAR));
   }
