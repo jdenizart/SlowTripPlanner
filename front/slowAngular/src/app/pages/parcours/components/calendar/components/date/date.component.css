@@ -12,14 +12,35 @@
     color:#00583b;
 }
 
+.mat-expansion-panel-header-description{
+    color:#474747;
+}
+.mat-hint {
+    color:#474747;
+}
+.mat-label{
+    color:#474747;
+}
+
+.mat-form-field {
+    color:#474747;
+}
+
 .mat-calendar-body-cell-content.mat-focus-indicator {
-
     position: absolute;
-
 }
 
-.mat-form-field-active {
-    color:#039766;
+.boutonajout{
+    display:flex;
+    justify-content: end;
 }
 
+.add-balise{
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: #1c6feccc;
+}
 
+.add-balise:hover{
+    background-color: #01fca8;
+}

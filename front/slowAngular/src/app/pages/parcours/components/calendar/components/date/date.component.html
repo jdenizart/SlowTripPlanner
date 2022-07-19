@@ -1,10 +1,10 @@
 <p>date works!</p>
 
 <mat-accordion multi="true">
-    <mat-expansion-panel>
+    <mat-expansion-panel class="formfield">
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <mat-form-field appearance="fill">
+                <mat-form-field  appearance="fill">
                     <mat-label>Choisissez une date</mat-label>
                     <input matInput [matDatepicker]="picker">
                     <mat-hint>MM/DD/YYYY</mat-hint>
@@ -19,6 +19,11 @@
         <app-balise>
         </app-balise>
     </mat-expansion-panel>
+    <div class="boutonajout">
+        <button class="add-balise" mat-mini-fab>
+            <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
+        </button>
+    </div>
 </mat-accordion>
 
 
