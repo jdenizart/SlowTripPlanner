@@ -25,9 +25,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule } from '@angular/material/core';
 // Balise
 import {MatCheckboxModule} from '@angular/material/checkbox'; 
+
 // Calendar & Balise
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
+import { DragDropModule } from "@angular/cdk/drag-drop";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -78,7 +80,8 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

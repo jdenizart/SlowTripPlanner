@@ -3,13 +3,14 @@
 }
 
 mat-sidenav-container {
-    height: auto;
+    height: 100vh;
     color:#474747;
     background-color: #e6e6e6;
 }
 
 mat-sidenav {
     width: auto;
+    height: 100vh;
     background-color: #00be7f;
 }
 
