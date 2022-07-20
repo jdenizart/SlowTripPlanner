@@ -1,11 +1,15 @@
 .dates{
-    width: 600px;
     margin-top: 20px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .mat-expansion-panel{
     background-color: #00be7f;
+    margin-right: 10px;
+    width: 600px;
 }
 
 .mat-expansion-panel-header{
@@ -39,10 +43,10 @@
 .boutonajout{
     display:flex;
     justify-content: end;
+    margin-bottom: 40px;
 }
 
 .add-balise{
-    margin-top: 10px;
     margin-right: 5px;
     background-color: #1c6feccc;
 }
