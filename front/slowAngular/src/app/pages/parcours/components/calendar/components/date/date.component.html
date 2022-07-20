@@ -1,3 +1,23 @@
+<mat-accordion multi="true" >
+    <mat-expansion-panel class="formfield">
+        <mat-expansion-panel-header class="date"  >
+            <mat-panel-title>
+                <mat-form-field  appearance="fill">
+                    <mat-label>Choisissez une date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </mat-panel-title>
+            <mat-panel-description>
+                Total Distance
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-balise>
+        </app-balise>
+    </mat-expansion-panel>
+</mat-accordion>
 <div class="dates" *ngFor="let date of dates; let i = index">
     <mat-accordion multi="true" >
         <mat-expansion-panel class="formfield">
