@@ -36,15 +36,18 @@ const ADD =
     {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
   ],
 })
+
 export class DateComponent {
   dates = new Array();
   TodayDate = new Date();
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer,private _adapter: DateAdapter<any>,
+
+  constructor(
+    iconRegistry: MatIconRegistry, 
+    sanitizer: DomSanitizer,
+    private _adapter: DateAdapter<any>,
     @Inject(MAT_DATE_LOCALE) private _locale: string,) { 
     iconRegistry.addSvgIconLiteral('add', sanitizer.bypassSecurityTrustHtml(ADD));
-    
   }
-
 
   ngOnInit(): void {
   }
