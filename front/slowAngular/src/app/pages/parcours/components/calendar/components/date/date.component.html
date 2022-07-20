@@ -29,7 +29,7 @@
                         <mat-hint>{{getDateFormatString()}}</mat-hint>
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field>
+                    </mat-form-field>
                 </mat-panel-title>
                 <mat-panel-description>
                     Total Distance
@@ -44,10 +44,12 @@
     </button>
 </div>
 
-<div class="boutonajout">
-    <button class="add-balise" mat-mini-fab (click)="addvalue()">
-        <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
-    </button>
+<div class="boutonajout" id="section1">
+    <a href="#section1">
+        <button class="add-balise" mat-mini-fab (click)="addvalue()">
+            <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
+        </button>
+    </a>
 </div>
 
 

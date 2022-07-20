@@ -1,5 +1,9 @@
+.sidenav-button{
+    margin-top: 20px;
+}
+
 mat-sidenav-container {
-    height: 100%;
+    height: auto;
     color:#474747;
     background-color: #e6e6e6;
 }

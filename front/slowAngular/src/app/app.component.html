@@ -4,7 +4,7 @@
         </app-sidebar>
     </mat-sidenav>
     <mat-sidenav-content>
-        <button (click)="opened=!opened">Toggle</button>
+        <button class="sidenav-button" (click)="opened=!opened">Toggle</button>
         <div id="bodycontainer">
             <div id="itineraire">
                 <h1>Itinéraire</h1>
@@ -23,13 +23,6 @@
             </div>
         </div>           
     </mat-sidenav-content>
-  </mat-sidenav-container>
-
-
-  
-
-
-
-
+</mat-sidenav-container>
 
 <router-outlet></router-outlet>
