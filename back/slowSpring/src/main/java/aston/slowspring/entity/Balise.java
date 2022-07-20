@@ -22,10 +22,10 @@ public class Balise {
 
     // est relié aux tables:
     @ManyToOne
-    @JoinColumn(name = "parcours_balise", nullable = false)
+    @JoinColumn(name = "parcours_balise_id", nullable = true)
     private Parcours parcours;
     @OneToOne
-    @JoinColumn(name = "point_balise", nullable = false)
+    @JoinColumn(name = "point_balise_id", nullable = true)
     private Point point;
 
     // contructeurs
