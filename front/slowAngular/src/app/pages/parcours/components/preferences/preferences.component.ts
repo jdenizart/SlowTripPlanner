@@ -211,7 +211,7 @@ export class PreferencesComponent implements OnInit {
     iconRegistry.addSvgIconLiteral('bookmark', sanitizer.bypassSecurityTrustHtml(BOOKMARK));
     iconRegistry.addSvgIconLiteral('bike', sanitizer.bypassSecurityTrustHtml(BIKE));
     iconRegistry.addSvgIconLiteral('lvl', sanitizer.bypassSecurityTrustHtml(LVL));
-   }
+  }
 
   ngOnInit(): void {
   }

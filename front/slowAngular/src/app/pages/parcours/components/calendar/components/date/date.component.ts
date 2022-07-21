@@ -1,4 +1,4 @@
-import { Component, Inject, Input } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 import {
@@ -36,7 +36,7 @@ const ADD =
   ],
 })
 
-export class DateComponent {
+export class DateComponent implements OnInit  {
   dates = new Array();
   todayDate = new Date();
   @Input() userDate = this.todayDate;
