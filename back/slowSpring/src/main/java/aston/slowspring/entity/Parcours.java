@@ -25,7 +25,7 @@ public class Parcours {
     private int nombreJour;
 
     // Table reliée aux tables suivantes:
-    @OneToMany(mappedBy = "parcours", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "parcours", fetch = FetchType.EAGER)
     private List<Balise> balises;
 
     @ManyToOne
@@ -115,9 +115,10 @@ public class Parcours {
                 ", image='" + image + '\'' +
                 ", dateDepart=" + dateDepart +
                 ", nombreJour=" + nombreJour +
+
+
+
+
                 '}';
     }
-
-
-
 }

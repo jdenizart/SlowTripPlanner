@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface LocomotionRepo extends JpaRepository<Locomotion,Long> {
     List<Locomotion> findByLibeleLoco(String libeleloco);
-    //List<Locomotion> findByLibeleLoco(String libeleLoco);
 
-    //List<Locomotion> findByDescriptionLoco(String descriptionLoco);
+
+
 }

@@ -84,7 +84,6 @@ public class Point {
                 ", etiquette='" + etiquette + '\'' +
                 ", Longitude='" + Longitude + '\'' +
                 ", Latitude='" + Latitude + '\'' +
-                ", balise=" + balise +
                 '}';
     }
 }
