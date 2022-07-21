@@ -47,7 +47,11 @@
 
 .submitButton{
     color: black;
-    background-color: #def86bcc;
+    background-color: #69f0ae;
     margin-right: 20px;
     margin-bottom: 20px;
+}
+
+.submitButton:hover{
+    background-color: #def86bcc;
 }
