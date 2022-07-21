@@ -32,8 +32,10 @@
 
 .flag-start {
     background-color: #def86bcc;
+    cursor:default;
 }
 
 .flag-end {
     background-color: #def86bcc;
+    cursor:default;
 }

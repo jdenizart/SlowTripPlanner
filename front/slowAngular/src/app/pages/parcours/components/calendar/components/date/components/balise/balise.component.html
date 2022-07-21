@@ -4,7 +4,7 @@
         #unassignedList="cdkDropList"
         [cdkDropListData]="balises"
         (cdkDropListDropped)="drop($event)"
-     >
+    >
         <div cdkDrag class="balises" *ngFor="let balise of balises; let i = index, let first = first; let last = last">
             <mat-checkbox class="checkbox"></mat-checkbox>
 
@@ -49,7 +49,7 @@
                 </div>
                 <!--default case when there are no matches -->
                 <div *ngSwitchDefault>
-                    <button class="bin" mat-mini-fab>
+                    <button type="button" class="bin" mat-mini-fab>
                         <mat-icon (click)="removevalue(i)" class="icone" svgIcon="bin" aria-hidden="false" aria-label="bin icone"></mat-icon>
                     </button>
                 </div>

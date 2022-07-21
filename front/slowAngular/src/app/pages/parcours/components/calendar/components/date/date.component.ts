@@ -62,4 +62,9 @@ export class DateComponent {
   getDateFormatString(): string {
       return 'DD/MM/YYYY';
   }
+  addDays(previousDate: Date, days: number) {
+    var updateDate = new Date(previousDate);
+    updateDate.setDate(updateDate.getDate() + days);
+    return updateDate;
+  }
 }
