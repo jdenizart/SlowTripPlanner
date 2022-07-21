@@ -6,7 +6,6 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from "@angular/cdk/dr
 // Interface des balises
 export interface DragDropBaliseItem {
   ville: string;
-  label: string;
   distance: string;
 }
 
@@ -38,6 +37,14 @@ export class BaliseComponent implements OnInit {
   // Array des Balises
   @Input()
   balises: DragDropBaliseItem[] = [
+    {
+      ville: "",
+      distance: "km"
+    },
+    {
+      ville: "",
+      distance: "km"
+    }
   ];
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { 
@@ -55,7 +62,7 @@ export class BaliseComponent implements OnInit {
   }
 
   addvalue(){
-    this.balises.push({ville:"", label:"Etape",distance:"km"});
+    this.balises.push({ville:"", distance:"km"});
   }
 
   drop(event: CdkDragDrop<DragDropBaliseItem[]>) {

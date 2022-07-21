@@ -1,47 +1,66 @@
-<div >
-    <div class="balises">
-        <mat-checkbox class="checkbox"></mat-checkbox>
-        <mat-form-field appearance="outline">
-            <mat-label>Départ</mat-label>
-            <input type="text" matInput>
-        </mat-form-field>
-        <p>km</p>
-        <button class="flag-start" mat-mini-fab>
-            <mat-icon class="icone" svgIcon="flag-start" aria-hidden="false" aria-label="flag-start icone"></mat-icon>
-        </button>
-    </div>
+<div class="test" >
     <div 
         cdkDropList
         #unassignedList="cdkDropList"
         [cdkDropListData]="balises"
         (cdkDropListDropped)="drop($event)"
      >
-        <div cdkDrag class="balises" *ngFor="let balise of balises; let i = index">
+        <div cdkDrag class="balises" *ngFor="let balise of balises; let i = index, let first = first; let last = last">
             <mat-checkbox class="checkbox"></mat-checkbox>
-            <mat-form-field appearance="outline">
-                <mat-label>{{balise.label}}</mat-label>
-                <input type="text" [(ngModel)]="balise.ville" matInput>
-            </mat-form-field>
+
+            <!-- Switch gérant l'affichage du bon bouton selon l'emplacement de la balise -->
+            <div [ngSwitch]="i">
+                <!-- the same view can be shown in more than one case -->
+                <div *ngSwitchCase="0">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Départ</mat-label>
+                        <input type="text" [(ngModel)]="balise.ville" matInput>
+                    </mat-form-field>
+                </div>
+                <div *ngSwitchCase="balises.length-1">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Arrivée</mat-label>
+                        <input type="text" [(ngModel)]="balise.ville" matInput>
+                    </mat-form-field>
+                </div>
+                <!--default case when there are no matches -->
+                <div *ngSwitchDefault>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Etape</mat-label>
+                        <input type="text" [(ngModel)]="balise.ville" matInput>
+                    </mat-form-field>
+                </div>
+            </div>
+
             <p>{{balise.distance}}</p>
-            <button class="bin" mat-mini-fab>
-                <mat-icon (click)="removevalue(i)" class="icone" svgIcon="bin" aria-hidden="false" aria-label="bin icone"></mat-icon>
-            </button>
+            
+            <!-- Switch gérant l'affichage du bon bouton selon l'emplacement de la balise -->
+            <div [ngSwitch]="i">
+                <!-- the same view can be shown in more than one case -->
+                <div *ngSwitchCase="0">
+                    <button class="flag-start" mat-mini-fab>
+                        <mat-icon class="icone" svgIcon="flag-start" aria-hidden="false" aria-label="flag-start icone"></mat-icon>
+                    </button>
+                </div>
+                <div *ngSwitchCase="balises.length-1">
+                    <button class="flag-end" mat-mini-fab>
+                        <mat-icon class="icone" svgIcon="flag-end" aria-hidden="false" aria-label="flag-end icone"></mat-icon>
+                    </button>
+                </div>
+                <!--default case when there are no matches -->
+                <div *ngSwitchDefault>
+                    <button class="bin" mat-mini-fab>
+                        <mat-icon (click)="removevalue(i)" class="icone" svgIcon="bin" aria-hidden="false" aria-label="bin icone"></mat-icon>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="buttonadd" (click)="addvalue()" >
-            <button class="add-button" mat-mini-fab>
-                <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
-            </button>
+        <div>
+            <div class="buttonadd" (click)="addvalue()" >
+                <button class="add-button" mat-mini-fab>
+                    <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="balises">
-        <mat-checkbox class="checkbox"></mat-checkbox>
-        <mat-form-field appearance="outline">
-            <mat-label>Arrivée</mat-label>
-            <input type="text" matInput>
-        </mat-form-field>
-        <p>km</p>
-        <button class="flag-end" mat-mini-fab>
-            <mat-icon class="icone" svgIcon="flag-end" aria-hidden="false" aria-label="flag-end icone"></mat-icon>
-        </button>
     </div>
 </div>
