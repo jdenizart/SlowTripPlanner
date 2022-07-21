@@ -4,7 +4,7 @@
             <mat-panel-title>
                 <mat-form-field  appearance="fill">
                     <mat-label>Choisissez une date</mat-label>
-                    <input [value]="TodayDate" matInput [matDatepicker]="picker">
+                    <input [value]="userDate" matInput [matDatepicker]="picker">
                     <mat-hint>{{getDateFormatString()}}</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
@@ -25,7 +25,7 @@
                 <mat-panel-title>
                     <mat-form-field  appearance="fill">
                         <mat-label>Choisissez une date</mat-label>
-                        <input [value]="addDays(TodayDate,i+1)" matInput [matDatepicker]="picker">
+                        <input [value]="addDays(userDate,i+1)" matInput [matDatepicker]="picker">
                         <mat-hint>{{getDateFormatString()}}</mat-hint>
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
@@ -51,5 +51,3 @@
         </button>
     </a>
 </div>
-
-

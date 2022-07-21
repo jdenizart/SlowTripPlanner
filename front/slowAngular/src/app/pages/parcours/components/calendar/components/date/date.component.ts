@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 import {
@@ -38,7 +38,8 @@ const ADD =
 
 export class DateComponent {
   dates = new Array();
-  TodayDate = new Date();
+  todayDate = new Date();
+  @Input() userDate = this.todayDate;
 
   constructor(
     iconRegistry: MatIconRegistry, 
@@ -62,6 +63,7 @@ export class DateComponent {
   getDateFormatString(): string {
       return 'DD/MM/YYYY';
   }
+
   addDays(previousDate: Date, days: number) {
     var updateDate = new Date(previousDate);
     updateDate.setDate(updateDate.getDate() + days);

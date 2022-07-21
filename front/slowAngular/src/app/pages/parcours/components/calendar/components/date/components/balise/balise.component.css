@@ -39,3 +39,15 @@
     background-color: #def86bcc;
     cursor:default;
 }
+
+.divSubmitButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitButton{
+    color: black;
+    background-color: #def86bcc;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
