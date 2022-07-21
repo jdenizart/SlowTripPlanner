@@ -2,7 +2,7 @@
     padding: 0;
 }
 
-.balises{
+.balise{
     color: black;
     display: flex;
     justify-content: space-around;
@@ -11,7 +11,7 @@
     cursor:grab;
 }
 
-.balises:hover{
+.balise:hover{
     background-color: rgb(22, 172, 134);
 }
 

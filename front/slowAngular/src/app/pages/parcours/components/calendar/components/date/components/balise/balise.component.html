@@ -1,11 +1,11 @@
-<div class="test" >
+<div class="balises" >
     <div 
         cdkDropList
         #unassignedList="cdkDropList"
         [cdkDropListData]="balises"
         (cdkDropListDropped)="drop($event)"
     >
-        <div cdkDrag class="balises" *ngFor="let balise of balises; let i = index, let first = first; let last = last">
+        <div cdkDrag class="balise" *ngFor="let balise of balises; let i = index, let first = first; let last = last">
             <mat-checkbox class="checkbox"></mat-checkbox>
 
             <!-- Switch gérant l'affichage du bon bouton selon l'emplacement de la balise -->
@@ -65,6 +65,6 @@
     </div>
     <div class="divSubmitButton">
         <!-- formaction ou action -->
-        <button mat-flat-button class="submitButton" type="submit" value="">Sauver l'étape</button>
+        <button mat-raised-button class="submitButton" type="submit" value="">Sauver l'étape</button>
     </div>
 </div>
