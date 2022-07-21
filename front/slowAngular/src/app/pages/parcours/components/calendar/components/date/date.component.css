@@ -59,3 +59,19 @@
 .bin:hover{
     background-color: rgb(255, 33, 4);
 }
+
+.divSubmitButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitButton{
+    color: black;
+    background-color: #69f0ae;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.submitButton:hover{
+    background-color: #def86bcc;
+}
