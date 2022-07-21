@@ -1,0 +1,61 @@
+<mat-accordion multi="true" >
+    <mat-expansion-panel class="formfield">
+        <mat-expansion-panel-header class="date"  >
+            <mat-panel-title>
+                <mat-form-field  appearance="fill">
+                    <mat-label>Choisissez une date</mat-label>
+                    <input [value]="userDate" matInput [matDatepicker]="picker">
+                    <mat-hint>{{getDateFormatString()}}</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </mat-panel-title>
+            <mat-panel-description>
+                Total Distance
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-balise>
+        </app-balise>
+        <div class="divSubmitButton">
+            <!-- formaction ou action -->
+            <button mat-raised-button class="submitButton" type="submit" value="">Afficher sur la carte</button>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
+<div class="dates" *ngFor="let date of dates; let i = index">
+    <mat-accordion multi="true" >
+        <mat-expansion-panel class="formfield">
+            <mat-expansion-panel-header class="date"  >
+                <mat-panel-title>
+                    <mat-form-field  appearance="fill">
+                        <mat-label>Choisissez une date</mat-label>
+                        <input [value]="addDays(userDate,i+1)" matInput [matDatepicker]="picker">
+                        <mat-hint>{{getDateFormatString()}}</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </mat-panel-title>
+                <mat-panel-description>
+                    Total Distance
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <app-balise>
+            </app-balise>
+            <div class="divSubmitButton">
+                <!-- formaction ou action -->
+                <button mat-raised-button class="submitButton" type="submit" value="">Afficher sur la carte</button>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <button class="bin" mat-mini-fab>
+        <mat-icon (click)="removevalue(i)" class="icone" svgIcon="bin" aria-hidden="false" aria-label="bin icone"></mat-icon>
+    </button>
+</div>
+
+<div class="boutonajout" id="section1">
+    <a href="#section1">
+        <button class="add-balise" mat-mini-fab (click)="addvalue()">
+            <mat-icon class="icone" svgIcon="add" aria-hidden="false" aria-label="add icone"></mat-icon>
+        </button>
+    </a>
+</div>
