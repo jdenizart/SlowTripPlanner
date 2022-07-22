@@ -31,11 +31,11 @@ public class LocomotionService {
 
     public Locomotion update(Locomotion locomotion) {
 
-
         if (! this.locomotionRepo.existsById(locomotion.getLocomotion_id())) {
             throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE,
                     "impossible de trouver la locomotion à mettre à jour");
         }
+
 
         return this.locomotionRepo.save(locomotion);
     }

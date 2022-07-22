@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/balises")
+@CrossOrigin("http://localhost:4200")
 public class BaliseController {
     @Autowired
     private BaliseService baliseService;
