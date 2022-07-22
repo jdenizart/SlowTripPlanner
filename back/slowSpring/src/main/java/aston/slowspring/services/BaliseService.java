@@ -14,6 +14,7 @@ public class BaliseService {
     @Autowired
     private BaliseRepo baliseRepo;
     public List<Balise> findAll() {
+
         return this.baliseRepo.findAll();
     }
 

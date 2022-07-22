@@ -1,0 +1,57 @@
+::ng-deep .mat-expansion-panel-body{
+    padding: 0;
+}
+
+.balise{
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding:0px;
+    cursor:grab;
+}
+
+.balise:hover{
+    background-color: rgb(22, 172, 134);
+}
+
+.bin:hover{
+    background-color: rgb(255, 33, 4);
+}
+
+.add-button:hover{
+    background-color: #1c6feccc;
+}
+
+.buttonadd{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.flag-start {
+    background-color: #def86bcc;
+    cursor:default;
+}
+
+.flag-end {
+    background-color: #def86bcc;
+    cursor:default;
+}
+
+.divSubmitButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitButton{
+    color: black;
+    background-color: #69f0ae;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.submitButton:hover{
+    background-color: #def86bcc;
+}

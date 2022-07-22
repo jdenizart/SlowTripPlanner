@@ -1,0 +1,14 @@
+.mat-icon {
+    color:#474747;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color:#e6e6e6;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#00583b;
+}

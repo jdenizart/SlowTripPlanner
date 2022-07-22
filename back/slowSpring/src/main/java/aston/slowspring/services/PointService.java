@@ -1,14 +1,19 @@
 package aston.slowspring.services;
 
 import aston.slowspring.entity.Point;
+import aston.slowspring.repository.PointRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class PointService {
+    @Autowired
+    private PointRepo pointRepo;
     public List<Point> findAll() {
-        return null;
+
+        return this.pointRepo.findAll();
     }
 
     public List<Point> findByLongitude(String longitude) {

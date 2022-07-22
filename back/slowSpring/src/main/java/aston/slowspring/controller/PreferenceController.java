@@ -15,6 +15,8 @@ import java.util.List;
 @RequestMapping("/points")
 @CrossOrigin("http://localhost:4200")
 
+@RestController
+@RequestMapping("/preferences")
 public class PreferenceController {
 
     @Autowired
