@@ -1,0 +1,77 @@
+.dates{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.mat-expansion-panel{
+    background-color: #00be7f;
+    margin-right: 10px;
+    width: 600px;
+}
+
+.mat-expansion-panel-header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.mat-datepicker-toggle-active{
+    color:#00583b;
+}
+
+.mat-expansion-panel-header-description{
+    color:#474747;
+}
+.mat-hint {
+    color:#474747;
+}
+.mat-label{
+    color:#474747;
+}
+
+.mat-form-field {
+    color:#474747;
+}
+
+.mat-calendar-body-cell-content.mat-focus-indicator {
+    position: absolute;
+}
+
+.boutonajout{
+    display:flex;
+    justify-content: end;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.add-balise{
+    margin-right: 5px;
+    background-color: #1c6feccc;
+}
+
+.add-balise:hover{
+    background-color: #01fca8;
+}
+
+.bin:hover{
+    background-color: rgb(255, 33, 4);
+}
+
+.divSubmitButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitButton{
+    color: black;
+    background-color: #69f0ae;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.submitButton:hover{
+    background-color: #def86bcc;
+}

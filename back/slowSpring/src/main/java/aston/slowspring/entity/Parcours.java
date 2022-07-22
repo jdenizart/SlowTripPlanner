@@ -10,7 +10,7 @@ public class Parcours {
 
     // Attributs
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique=true, nullable=false)
     private Long parcours_id;
     @Column(nullable=false, length=100)
@@ -25,7 +25,7 @@ public class Parcours {
     private int nombreJour;
 
     // Table reliée aux tables suivantes:
-    @OneToMany(mappedBy = "parcours", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "parcours", fetch = FetchType.EAGER)
     private List<Balise> balises;
 
     @ManyToOne
@@ -106,6 +106,7 @@ public class Parcours {
         this.nombreJour = nombreJour;
     }
 
+
     @Override
     public String toString() {
         return "Parcours{" +
@@ -115,9 +116,10 @@ public class Parcours {
                 ", image='" + image + '\'' +
                 ", dateDepart=" + dateDepart +
                 ", nombreJour=" + nombreJour +
+
+
+
+
                 '}';
     }
-
-
-
 }
