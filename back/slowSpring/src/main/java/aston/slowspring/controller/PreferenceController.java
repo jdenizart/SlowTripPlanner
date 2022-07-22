@@ -12,11 +12,10 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 @RestController
-@RequestMapping("/points")
+@RequestMapping("/preferences")
 @CrossOrigin("http://localhost:4200")
 
-@RestController
-@RequestMapping("/preferences")
+
 public class PreferenceController {
 
     @Autowired
