@@ -1,0 +1,43 @@
+<div id="container">
+    
+    <aside id="leftAside">
+
+        <section>
+            <img [src]="profilePicUrl" alt="photo_utilisateur">
+            <p id="pseudo">{{pseudo}}</p>
+            <q id="devise">{{devise}}</q>
+        </section>
+
+        <section id="crud">
+            <h2>Options</h2>
+            <ul>
+                <li>
+                    <!-- Lancer le formulaire si clic ici -->
+                    <a href="">Ajouter un parcours</a>
+                </li>
+                <li>
+                    <!-- Lancer le formulaire si clic ici -->
+                    <a href="">Modifier</a>
+                </li>
+                <li>
+                    <!-- Afficher le modal/div cachée de confirmation de suppression-->
+                    <a href="">Supprimer</a>
+                </li>
+            </ul>
+        </section>
+
+    </aside>
+
+    <aside id="rightAside">
+        <!-- Affichage dynamique des parcours enregistrés du profil actif -->
+        <h2>Mes Parcours</h2>
+
+        <ul *ngFor="let Parcours of l_parcours; let i = index">
+            <li class="undecorated">{{i+1}}</li>
+            <li>{{Parcours.nom}}</li>
+            <li>{{Parcours.description}}</li>
+        </ul>
+
+    </aside>
+
+</div>
