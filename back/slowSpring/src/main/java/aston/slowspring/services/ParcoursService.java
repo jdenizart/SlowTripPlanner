@@ -14,7 +14,8 @@ public class ParcoursService {
     @Autowired
     private ParcoursRepo parcoursRepo;
     public List<Parcours> findAll() {
-        return null;
+
+        return this.parcoursRepo.findAll();
     }
 
     public List<Parcours> findByNomParcours(String nomParcours) {
@@ -30,7 +31,7 @@ public class ParcoursService {
 
         if (! this.parcoursRepo.existsById(parcours.getParcours_id())) {
             throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE,
-                    "impossible de trouver lle parcours à mettre à jour");
+                    "impossible de trouver le parcours à mettre à jour");
         }
         return this.parcoursRepo.save(parcours);
     }

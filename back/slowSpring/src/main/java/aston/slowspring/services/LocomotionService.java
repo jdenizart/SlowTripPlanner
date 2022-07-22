@@ -3,6 +3,7 @@ package aston.slowspring.services;
 import aston.slowspring.entity.Balise;
 import aston.slowspring.entity.Locomotion;
 import aston.slowspring.repository.LocomotionRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -11,9 +12,11 @@ import java.util.List;
 
 @Service
 public class LocomotionService {
+    @Autowired
     private LocomotionRepo locomotionRepo;
     public List<Locomotion> findAll() {
-        return null;
+
+        return this.locomotionRepo.findAll();
     }
 
     public List<Locomotion> findByLibeleloco(String libeleloco) {
@@ -35,6 +38,7 @@ public class LocomotionService {
     }
 
     public Locomotion delete(Long locomotion_id) {
+
         return null;
     }
 }

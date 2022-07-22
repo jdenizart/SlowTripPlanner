@@ -10,7 +10,7 @@ public class Parcours {
 
     // Attributs
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique=true, nullable=false)
     private Long parcours_id;
     @Column(nullable=false, length=100)
@@ -105,6 +105,7 @@ public class Parcours {
     public void setNombreJour(int nombreJour) {
         this.nombreJour = nombreJour;
     }
+
 
     @Override
     public String toString() {

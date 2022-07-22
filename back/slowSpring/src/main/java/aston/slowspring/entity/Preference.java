@@ -8,7 +8,7 @@ public class Preference {
 
     // Attributs
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long preference_id;
     @Column
     private Double kilometrageEtapeMoyenne;

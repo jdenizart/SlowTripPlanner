@@ -9,7 +9,7 @@ public class Locomotion {
 
     // Attributs
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long locomotion_id;
     @Column
     private String libeleLoco;  /// faute d'orthographe
@@ -51,7 +51,7 @@ public class Locomotion {
         return "Locomotion{" +
                 "locomotion_id=" + locomotion_id +
                 ", libeleLoco='" + libeleLoco + '\'' +
-                ", parcours=" + parcours +
+
                 '}';
     }
 }
