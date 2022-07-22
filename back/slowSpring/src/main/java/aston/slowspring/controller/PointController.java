@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/points")
+@CrossOrigin("http://localhost:4200")
 public class PointController {
 
     @Autowired
