@@ -25,7 +25,7 @@ public class LocomotionService {
     }
 
     public Locomotion update(Locomotion locomotion) {
-        return this.locomotionRepo.save();
+        return this.locomotionRepo.save(locomotion);
     }
 
     public Locomotion delete(Long locomotion_id) {
