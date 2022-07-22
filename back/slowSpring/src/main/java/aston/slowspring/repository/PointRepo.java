@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface PointRepo extends JpaRepository<Point,Long> {
 
-    List<Point> findByLongitude(String longitude);
+    //List<Point> findByLongitude(String longitude);
 
-    List<Point> findByLatitude(String latitude);
+    //List<Point> findByLatitude(String latitude);
 }

@@ -8,7 +8,7 @@ public class Point {
 
     // Attributs
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique=true, nullable=false)
     private int point_id;
 
@@ -84,7 +84,6 @@ public class Point {
                 ", etiquette='" + etiquette + '\'' +
                 ", Longitude='" + Longitude + '\'' +
                 ", Latitude='" + Latitude + '\'' +
-                ", balise=" + balise +
                 '}';
     }
 }
