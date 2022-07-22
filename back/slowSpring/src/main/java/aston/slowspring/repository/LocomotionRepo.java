@@ -6,7 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface LocomotionRepo extends JpaRepository<Locomotion,Long> {
-    List<Locomotion> findByLibeleLoco(String libeleLoco);
+    List<Locomotion> findByLibeleLoco(String libeleloco);
 
-    List<Locomotion> findByDescriptionLoco(String descriptionLoco);
+
+
 }
