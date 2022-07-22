@@ -1,0 +1,19 @@
+#headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 250px;
+}
+
+#headerWrapper {
+    border: 1px solid black;
+    margin-bottom: 25px;
+}
+
+#thumbnail {
+    height: 75px;
+    clip-path:ellipse(33% 50%);
+}

@@ -42,6 +42,8 @@ import { LocomotionComponent } from './pages/parcours/components/preferences/com
 import { DifficulteComponent } from './pages/parcours/components/preferences/components/difficulte/difficulte.component';
 import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.component';
 import { MapComponent } from './pages/parcours/components/map/map.component';
+import { HeaderComponent } from './commons/header/header.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
 import { UtilisateurComponent } from './pages/profil/components/utilisateur/utilisateur.component';
 
 
@@ -57,6 +59,8 @@ import { UtilisateurComponent } from './pages/profil/components/utilisateur/util
     DifficulteComponent,
     SidebarComponent,
     MapComponent,
+    HeaderComponent,
+    AccueilComponent,
     UtilisateurComponent,
   ],
   imports: [
