@@ -1,28 +1,2 @@
-<mat-sidenav-container>
-    <mat-sidenav color:primary mode="side" [(opened)]="opened">      
-        <app-sidebar>
-        </app-sidebar>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <button class="sidenav-button" (click)="opened=!opened">Toggle</button>
-        <div id="bodycontainer">
-            <div id="itineraire">
-                <h1>Itinéraire</h1>
-                <app-preferences>
-            
-                </app-preferences>
-                
-                <app-parcours>
-                
-                </app-parcours>
-            </div>
-            <div>              
-                <app-map>
-                    
-                </app-map>
-            </div>
-        </div>           
-    </mat-sidenav-content>
-</mat-sidenav-container>
 
 <router-outlet></router-outlet>
