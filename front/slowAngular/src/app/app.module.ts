@@ -43,6 +43,7 @@ import { DifficulteComponent } from './pages/parcours/components/preferences/com
 import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.component';
 import { MapComponent } from './pages/parcours/components/map/map.component';
 import { HeaderComponent } from './commons/header/header.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { HeaderComponent } from './commons/header/header.component';
     SidebarComponent,
     MapComponent,
     HeaderComponent,
+    AccueilComponent,
   ],
   imports: [
     BrowserModule,
