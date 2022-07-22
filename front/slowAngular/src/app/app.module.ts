@@ -42,6 +42,7 @@ import { LocomotionComponent } from './pages/parcours/components/preferences/com
 import { DifficulteComponent } from './pages/parcours/components/preferences/components/difficulte/difficulte.component';
 import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.component';
 import { MapComponent } from './pages/parcours/components/map/map.component';
+import { HeaderComponent } from './commons/header/header.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
     DifficulteComponent,
     SidebarComponent,
     MapComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
