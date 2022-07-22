@@ -44,6 +44,7 @@ import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.co
 import { MapComponent } from './pages/parcours/components/map/map.component';
 import { HeaderComponent } from './commons/header/header.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
+import { UtilisateurComponent } from './pages/profil/components/utilisateur/utilisateur.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
     MapComponent,
     HeaderComponent,
     AccueilComponent,
+    UtilisateurComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+#container {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    width: 150px;
+    clip-path:ellipse(33% 50%);
+}
+
+.undecorated {
+    list-style-type: none;
+}
