@@ -1,4 +1,3 @@
-
 // Import de FormsModule pour faire fonctionner angular Material
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -43,7 +42,7 @@ import { DifficulteComponent } from './pages/parcours/components/preferences/com
 import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.component';
 import { MapComponent } from './pages/parcours/components/map/map.component';
 import { HeaderComponent } from './commons/header/header.component';
-import { AccueilComponent } from './pages/accueil/accueil.component';
+// import { AccueilComponent } from './pages/accueil/accueil.component';
 import { UtilisateurComponent } from './pages/profil/components/utilisateur/utilisateur.component';
 
 
@@ -60,7 +59,7 @@ import { UtilisateurComponent } from './pages/profil/components/utilisateur/util
     SidebarComponent,
     MapComponent,
     HeaderComponent,
-    AccueilComponent,
+    // AccueilComponent,
     UtilisateurComponent,
   ],
   imports: [
