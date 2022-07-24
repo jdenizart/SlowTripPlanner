@@ -43,8 +43,10 @@ import { DifficulteComponent } from './pages/parcours/components/preferences/com
 import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.component';
 import { MapComponent } from './pages/parcours/components/map/map.component';
 import { HeaderComponent } from './commons/header/header.component';
-import { AccueilComponent } from './pages/accueil/accueil.component';
+
 import { UtilisateurComponent } from './pages/profil/components/utilisateur/utilisateur.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BaliseService } from './services/balise/balise.service';
 
 
 @NgModule({
@@ -60,8 +62,9 @@ import { UtilisateurComponent } from './pages/profil/components/utilisateur/util
     SidebarComponent,
     MapComponent,
     HeaderComponent,
-    AccueilComponent,
+    
     UtilisateurComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -87,9 +90,10 @@ import { UtilisateurComponent } from './pages/profil/components/utilisateur/util
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BaliseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
