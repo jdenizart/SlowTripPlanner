@@ -13,7 +13,7 @@ public class Balise {
     private Long balise_id;  // JEROME: homogénéité des noms bof (ici en serpent case eplus loin en camelcase)
     @Column(nullable = false, length = 45)
     private String nomBalise;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Date dateTime;  // JEROME: le nom n'est pas approprié, c'est une date seulement
     @Column(nullable = false)
     private Double distance;
@@ -22,10 +22,10 @@ public class Balise {
 
     // est relié aux tables:
     @ManyToOne
-    @JoinColumn(name = "parcours_balise", nullable = false)
+    @JoinColumn(name = "parcours_balise", nullable = true)
     private Parcours parcours;
     @OneToOne
-    @JoinColumn(name = "point_balise", nullable = false)
+    @JoinColumn(name = "point_balise", nullable = true)
     private Point point;
 
     // contructeurs
