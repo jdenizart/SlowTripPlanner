@@ -11,6 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 @RestController
 @RequestMapping("/parcours")
+@CrossOrigin("http://localhost:4200")
 public class ParcoursController {
 
     @Autowired
