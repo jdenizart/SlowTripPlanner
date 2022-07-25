@@ -12,13 +12,14 @@ export class UtilisateurComponent implements OnInit {
   pseudo: string = "Pseudo en dur dans le *.ts";
   devise: string = "Devise en dur dans le *.ts";
 
+  profils: Profil[]=[];
   constructor(private profilService:ProfilService) { }
 
   ngOnInit(): void {
   }
 
   onGetProfils(){
-    this.profilService.getProfil()
+    this.profilService.getProfils()
     .subscribe(data=>{
       this.profils=data;
     })

@@ -10,7 +10,7 @@ const apiUrlProfil = environment.API_URL+"/profils";
 export class ProfilService {
 
   constructor(private http:HttpClient) { }
-  public getProfil(){
+  public getProfils(){
     return this.http.get<Profil[]>(environment.API_URL+"/profils")
     
   }
