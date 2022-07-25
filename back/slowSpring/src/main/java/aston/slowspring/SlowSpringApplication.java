@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SlowSpringApplication implements CommandLineRunner {
     @Autowired
-    private BaliseRepo baliseRepo;
+    //private BaliseRepo baliseRepo;
     private ProfilRepo profilRepo;
     public static void main(String[] args) {
         SpringApplication.run(SlowSpringApplication.class, args);
@@ -21,12 +21,14 @@ public class SlowSpringApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-    baliseRepo.save(new Balise("balise2",null ,2.0,true,null,null));
+    //baliseRepo.save(new Balise("balise2",null ,2.0,true,null,null));
     profilRepo.save(new Profil("meiry11","null","Respirez le courage, expirez la peur",null));
 
-
-    baliseRepo.findAll().forEach(b->{
-        System.out.println(b.toString());
+    profilRepo.findAll().forEach(p->{
+        System.out.println(p.toString());
     });
+    //baliseRepo.findAll().forEach(b->{
+        //System.out.println(b.toString());
+    //});
     }
 }
