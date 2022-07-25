@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list'; 
 import {MatTreeModule} from '@angular/material/tree';
-import {MatButton, MatButtonModule} from '@angular/material/button';
+import {MatButtonModule} from '@angular/material/button';
 // Body calls
 // Preferences
   // Locomotion
@@ -42,11 +42,7 @@ import { DifficulteComponent } from './pages/parcours/components/preferences/com
 import { SidebarComponent } from './pages/parcours/components/sidebar/sidebar.component';
 import { MapComponent } from './pages/parcours/components/map/map.component';
 import { HeaderComponent } from './commons/header/header.component';
-
-
-
-// import { AccueilComponent } from './pages/accueil/accueil.component';
-
+import { AccueilComponent } from './pages/accueil/accueil.component';
 import { UtilisateurComponent } from './pages/profil/components/utilisateur/utilisateur.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BaliseService } from './services/balise/balise.service';
@@ -65,13 +61,8 @@ import { BaliseService } from './services/balise/balise.service';
     SidebarComponent,
     MapComponent,
     HeaderComponent,
-
-    
-
-    // AccueilComponent,
-
-    UtilisateurComponent,
-    
+    AccueilComponent,
+    UtilisateurComponent
   ],
   imports: [
     BrowserModule,

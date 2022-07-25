@@ -2,27 +2,21 @@
     
     <aside id="leftAside">
 
-        <section>
+        <section id="userInfos">
             <img [src]="profilePicUrl" alt="photo_utilisateur">
             <p id="pseudo">{{pseudo}}</p>
             <q id="devise">{{devise}}</q>
         </section>
 
         <section id="crud">
+
             <h2>Options</h2>
-            <ul>
-                <li>
-                    <a routerLink="/parcours">Ajouter un parcours</a>
-                </li>
-                <li>
-                    <!-- Lancer le formulaire si clic ici -->
-                    <a href="">Modifier</a>
-                </li>
-                <li>
-                    <!-- Afficher le modal/div cachée de confirmation de suppression-->
-                    <a href="">Supprimer</a>
-                </li>
-            </ul>
+            <mat-nav-list>
+                <a mat-list-item routerLink="/parcours">Ajouter un parcours</a>
+                <a mat-list-item href="">Modifier</a>
+                <a mat-list-item href="">Supprimer</a>
+            </mat-nav-list>
+
         </section>
 
     </aside>

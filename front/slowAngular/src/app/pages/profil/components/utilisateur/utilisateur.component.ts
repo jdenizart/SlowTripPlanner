@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { Profil } from 'src/app/models/profil/profil.model';
 import { ProfilService } from 'src/app/services/profil/profil.service';
+=======
+import {Title} from "@angular/platform-browser";
+>>>>>>> dev
 
 @Component({
   selector: 'app-utilisateur',
@@ -9,12 +13,18 @@ import { ProfilService } from 'src/app/services/profil/profil.service';
 })
 export class UtilisateurComponent implements OnInit {
 
-  profilePicUrl: string = "https://cdn.eso.org/images/screen/eso1907a.jpg";
-  pseudo: string = "Pseudo en dur dans le *.ts";
-  devise: string = "Devise en dur dans le *.ts";
+  profilePicUrl: string = "https://www.mariderm.com/wp-content/uploads/2018/12/visage-tonus-after.jpg";
+  pseudo: string = "Pseudo en dur";
+  devise: string = "Devise en dur";
 
+<<<<<<< HEAD
   profils: Profil[] = [];
   constructor(private profilService:ProfilService) { }
+=======
+  constructor(private titleService:Title) {
+    this.titleService.setTitle("Slow - profil");
+  }
+>>>>>>> dev
 
   ngOnInit(): void {
   }

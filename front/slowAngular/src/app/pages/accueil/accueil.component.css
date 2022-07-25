@@ -1,12 +1,33 @@
-div {
-    text-align: center;
+#container {
+    background-color: #E6E6E6;
 }
 
-a {
-    display: block;
-    margin: 50px;
+#intro {
+    text-align: left;
+    padding: 30px;
+    color: white;
+    font-size: 2em;
+
+    background: url("../../../assets/homeBackground.jpg");
+    background-position: center;
+    height: 100vh;
+}
+
+#intro button {
+    margin-left: 0;
 }
 
 h1 {
     color: #06886F;
+}
+
+button {
+    display: block;
+    background-color: #01806998;
+    margin: 70px auto;
+}
+
+iframe {
+    display: block;
+    margin: 30px auto;
 }

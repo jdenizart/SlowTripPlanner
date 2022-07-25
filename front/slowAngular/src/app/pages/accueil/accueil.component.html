@@ -1,8 +1,24 @@
-<div>
-    <h1>Slow Trip Planner</h1>
+<div id="container">
 
-    <a routerLink="/profil">Mes Parcours</a>
+    <section id="intro">
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/r5gmrKSfBzc" title="Bike video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <article>
+            <p>Direction :</p>
+            <p>La campagne</p>
+        </article>
+
+        <article>
+            <p>Voyager <b>à votre rythme</b></p>
+            <p>avec votre <b>agenda d'itinéraires</b></p>
+            <button mat-raised-button routerLink="/profil">C'est parti !</button>
+        </article>
+
+    </section>
+
+    <!-- Appliquer des multiples si modif de la taille de l'iframe. Valeurs de base de la vidéo : 948x534 -->
+    <iframe width="474" height="267" src="https://player.vimeo.com/video/185228454?title=0&portrait=0&byline=0&autoplay=1&muted=true"></iframe>
+
 </div>
+
+
 
