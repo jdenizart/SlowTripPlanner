@@ -1,19 +1,16 @@
 <div id="headerWrapper">
 
-    <a routerLink="/accueil">
+    <a class="headerElt" routerLink="/accueil">
         <img id="logo" [src]="logoPath"/>
     </a>
 
-    <nav>
-<!--         <a routerLink="/accueil">Accueil</a>
-        <a routerLink="/profil">Profil</a>
-        <a routerLink="/parcours">Ajouter un Parcours</a> -->
-        <mat-raised-button routerLink="/accueil">Accueil</mat-raised-button>
-        <mat-raised-button routerLink="/profil">Profil</mat-raised-button>
-        <mat-raised-button routerLink="/parcours">Ajouter un Parcours</mat-raised-button>
+    <nav class="headerElt">
+        <button mat-raised-button routerLink="/accueil">Accueil</button>
+        <button mat-raised-button routerLink="/profil">Profil</button>
+        <button mat-raised-button routerLink="/parcours">Ajout parcours</button>
     </nav>
     
-    <a routerLink="/profil">
+    <a class="headerElt" routerLink="/profil">
         <img id="thumbnail" [src]="profilePicUrl"/>
     </a>
 
