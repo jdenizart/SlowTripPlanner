@@ -2,18 +2,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid black;
+}
+
+.headerElt {
+    width: 33%;
 }
 
 #logo {
     width: 250px;
 }
 
-#headerWrapper {
-    border: 1px solid black;
-    margin-bottom: 25px;
+#headerWrapper nav {
+    display: flex;
+    justify-content: center;
 }
 
 #thumbnail {
+    margin-left: auto;
+    display: block;
     height: 75px;
     clip-path:ellipse(33% 50%);
+}
+
+button {
+    background-color: #018068;
+    margin: 20px;
 }

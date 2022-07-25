@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   // Mettre plutôt le chemin absolu.
   logoPath: string = "../../assets/stpLogo.png";
-  profilePicUrl: string = "https://cdn.eso.org/images/screen/eso1907a.jpg";
+  profilePicUrl: string = "https://www.mariderm.com/wp-content/uploads/2018/12/visage-tonus-after.jpg";
 
   constructor() { }
 
