@@ -93,7 +93,7 @@ import { BaliseService } from './services/balise/balise.service';
     DragDropModule,
     HttpClientModule
   ],
-  providers: [BaliseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
