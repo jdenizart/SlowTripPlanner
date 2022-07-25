@@ -1,9 +1,20 @@
 <div id="headerWrapper">
 
-    <a routerLink="accueil">
+    <a routerLink="/accueil">
         <img id="logo" [src]="logoPath"/>
     </a>
+
+    <nav>
+<!--         <a routerLink="/accueil">Accueil</a>
+        <a routerLink="/profil">Profil</a>
+        <a routerLink="/parcours">Ajouter un Parcours</a> -->
+        <mat-raised-button routerLink="/accueil">Accueil</mat-raised-button>
+        <mat-raised-button routerLink="/profil">Profil</mat-raised-button>
+        <mat-raised-button routerLink="/parcours">Ajouter un Parcours</mat-raised-button>
+    </nav>
     
-    <img id="thumbnail" [src]="profilePicUrl"/>
+    <a routerLink="/profil">
+        <img id="thumbnail" [src]="profilePicUrl"/>
+    </a>
 
 </div>
