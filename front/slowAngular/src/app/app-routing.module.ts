@@ -4,7 +4,9 @@ import { UtilisateurComponent } from './pages/profil/components/utilisateur/util
 
 const routes: Routes = [
   {
+
     path: "/utilisateurs", component: UtilisateurComponent
+
   }
 ];
 

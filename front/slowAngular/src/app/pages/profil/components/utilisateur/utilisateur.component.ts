@@ -20,7 +20,7 @@ export class UtilisateurComponent implements OnInit {
   }
 
   onGetProfils(){
-    this.profilService.getProfil()
+    this.profilService.getProfils()
     .subscribe(data=>{
       this.profils=data;
     })
