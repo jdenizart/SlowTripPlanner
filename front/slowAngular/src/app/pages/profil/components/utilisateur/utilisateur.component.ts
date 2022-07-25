@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfilService } from 'src/app/services/profil/profil.service';
 
 @Component({
   selector: 'app-utilisateur',
@@ -11,26 +12,17 @@ export class UtilisateurComponent implements OnInit {
   pseudo: string = "Pseudo en dur dans le *.ts";
   devise: string = "Devise en dur dans le *.ts";
 
-  constructor() { }
+  constructor(private profilService:ProfilService) { }
 
   ngOnInit(): void {
   }
 
-  // Pour test. A supprimer à terme :
-  l_parcours: any[] =
-  [
-    {
-      nom: "Mon 1er Parcours",
-      description: "Lille-Amsterdam",
-      champ1: "champ1",
-      champ2: "champ2"
-    },
-    {
-      nom: "Le second Parcours",
-      description: "Amiens-Bruxelles",
-      champ1: "champ1",
-      champ2: "champ2"
-    }
-  ];
-
+  onGetProfils(){
+    this.profilService.getProfil()
+    .subscribe(data=>{
+      this.profils=data;
+    })
+  }
+  
+  
 }

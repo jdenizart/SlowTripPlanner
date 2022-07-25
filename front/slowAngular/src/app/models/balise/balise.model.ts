@@ -1,6 +1,6 @@
 export class Balise {
     constructor(
-        public id: number,
+        public balise_id:any,
         public nomBalise: string,
         public dateTime: Date,
         public distance: any,
