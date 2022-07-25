@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Profil } from 'src/app/models/profil/profil.model';
 import { ProfilService } from 'src/app/services/profil/profil.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class UtilisateurComponent implements OnInit {
   pseudo: string = "Pseudo en dur dans le *.ts";
   devise: string = "Devise en dur dans le *.ts";
 
+  profils: Profil[] = [];
   constructor(private profilService:ProfilService) { }
 
   ngOnInit(): void {

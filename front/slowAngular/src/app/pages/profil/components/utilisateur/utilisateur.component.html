@@ -32,10 +32,10 @@
         <!-- Affichage dynamique des parcours enregistrés du profil actif -->
         <h2>Mes Parcours</h2>
 
-        <ul *ngFor="let Parcours of l_parcours; let i = index">
+        <ul *ngFor="let profil of profils; let i = index">
             <li class="undecorated">{{i+1}}</li>
-            <li>{{Parcours.nom}}</li>
-            <li>{{Parcours.description}}</li>
+            <li>{{profil.photo_profil}}</li>
+            <li>{{profil.pseudo}}</li>
         </ul>
 
     </aside>
