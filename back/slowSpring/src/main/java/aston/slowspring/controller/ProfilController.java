@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-@RestController
+
 
 
 @CrossOrigin("http://localhost:4200")
-
+@RestController
 @RequestMapping("/profils")
 
 public class ProfilController {
@@ -43,6 +43,7 @@ public class ProfilController {
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.CREATED)
     public Profil create(@RequestBody Profil newProfil) {
+
         return this.profilService.create(newProfil);
     };
 

@@ -21,7 +21,7 @@ public class ProfilService {
     }
 
     public Profil create(Profil newProfil) {
-        return newProfil;
+        return this.profilRepo.save(newProfil);
     }
 
     public Profil update(Profil profil) {

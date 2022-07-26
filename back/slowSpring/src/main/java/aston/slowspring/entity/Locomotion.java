@@ -22,8 +22,10 @@ public class Locomotion {
     // Constructeurs
     public Locomotion() {
     }
-    public Locomotion(String libeleLoco) {
+
+    public Locomotion(String libeleLoco, List<Parcours> parcours) {
         this.libeleLoco = libeleLoco;
+        this.parcours = parcours;
     }
 
     // Getters & Setters

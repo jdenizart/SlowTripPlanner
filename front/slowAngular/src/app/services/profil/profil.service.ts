@@ -10,9 +10,14 @@ const apiUrlProfil = environment.API_URL+"/profils";
 export class ProfilService {
 
   constructor(private http:HttpClient) { }
+  
   public getProfils(){
-    return this.http.get<Profil[]>(environment.API_URL+"/profils")
+    return this.http.get<Profil[]>(apiUrlProfil)
     
+  }
+
+  public save(newProfil:Profil){
+    return this.http.post<Profil>(apiUrlProfil, newProfil)
   }
 
   /**findById(profil_id:any){

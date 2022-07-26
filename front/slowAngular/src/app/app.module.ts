@@ -46,6 +46,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { UtilisateurComponent } from './pages/profil/components/utilisateur/utilisateur.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BaliseService } from './services/balise/balise.service';
+import { ProfilFormulaireComponent } from './pages/profil/components/profil-formulaire/profil-formulaire.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { BaliseService } from './services/balise/balise.service';
     MapComponent,
     HeaderComponent,
     AccueilComponent,
-    UtilisateurComponent
+    UtilisateurComponent,
+    ProfilFormulaireComponent
   ],
   imports: [
     BrowserModule,

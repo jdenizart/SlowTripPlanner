@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { Profil } from 'src/app/models/profil/profil.model';
 import { ProfilService } from 'src/app/services/profil/profil.service';
-=======
-import {Title} from "@angular/platform-browser";
->>>>>>> dev
 
 @Component({
   selector: 'app-utilisateur',
@@ -17,23 +13,12 @@ export class UtilisateurComponent implements OnInit {
   pseudo: string = "Pseudo en dur";
   devise: string = "Devise en dur";
 
-<<<<<<< HEAD
   profils: Profil[] = [];
   constructor(private profilService:ProfilService) { }
-=======
-  constructor(private titleService:Title) {
-    this.titleService.setTitle("Slow - profil");
-  }
->>>>>>> dev
 
   ngOnInit(): void {
-  }
-
-  onGetProfils(){
     this.profilService.getProfils()
-    .subscribe(data=>{
-      this.profils=data;
-    })
+    .subscribe(data=>this.profils=data);
   }
   
   

@@ -1,0 +1,45 @@
+
+  <form [formGroup]="ProfilForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="pseudo">Pseudo : </label>
+      <input
+        type="text"
+        id="pseudo"
+        formControlName="pseudo"
+        placeholder="pseudo"
+      />
+      
+      
+    </div>
+    <div>
+      <label for="photo_profil">Image pour votre profil : </label>
+      <input
+        type="text"
+        id="photo_profil"
+        formControlName="photo_profil"
+        placeholder="photo_profil"
+      />
+     
+    </div>
+
+    <div>
+        <label for="devise">Votre devise : </label>
+        <input
+          type="text"
+          id="devise"
+          formControlName="devise"
+          placeholder="devise"
+        />
+       
+      </div>
+  
+    
+      <button type="button" (click)="addProfil()">+</button>
+      
+     
+    
+    <div>
+      <button type="submit">Envoyer</button>
+    </div>
+  </form>
+  
