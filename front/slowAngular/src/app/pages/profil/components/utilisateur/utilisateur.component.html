@@ -13,9 +13,9 @@
             <h2>Options</h2>
             <mat-nav-list>
                 <a mat-list-item routerLink="/parcours">Ajouter un parcours</a>
-                <a mat-list-item href="">Modifier</a>
-                <a mat-list-item href="">Supprimer</a>
-            </mat-nav-list>
+                <!--<a mat-list-item href="">Modifier</a>
+                <a mat-list-item href="">Supprimer</a>-->
+            </mat-nav-list> 
 
         </section>
 
@@ -27,6 +27,7 @@
 
         <ul *ngFor="let Parcours of l_parcours; let i = index">
             <li class="undecorated">{{i+1}}</li>
+            <img [src]="Parcours.imgUrl" alt="miniature_parcours"/>
             <li>{{Parcours.nom}}</li>
             <li>{{Parcours.description}}</li>
         </ul>

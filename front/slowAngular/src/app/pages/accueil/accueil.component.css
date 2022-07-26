@@ -13,8 +13,20 @@
     height: 100vh;
 }
 
+#subTitle {
+    color:#9affeb;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+#partTwo {
+    margin-top: 250px;
+}
+
 #intro button {
     margin-left: 0;
+    font-size: large;
+    opacity: 1;
 }
 
 h1 {
@@ -23,7 +35,7 @@ h1 {
 
 button {
     display: block;
-    background-color: #01806998;
+    background-color: #06886F;
     margin: 70px auto;
 }
 
