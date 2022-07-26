@@ -7,27 +7,36 @@ import java.util.List;
 @Table(name = "profil")
 public class Profil {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique=true, nullable=false)
     private Long profil_id;
-    @Column
+    @Column(nullable=false, length=45)
     private String pseudo;
-    @Column
+    @Column(length=200)
     private String photo_profil;
-    @Column
+    @Column(length=255)
     private String devise;
-    @OneToMany
-    private List<Parcours> parcours;
-    @OneToMany
-    private List<Preference> preferences;
 
+    // table reliée à celle de Parcours en 1 to many
+    @OneToMany(mappedBy="profil")
+    private List<Parcours> parcours;
+
+    // Contructeurs
     public Profil() {
     }
 
-    public Profil(Long profil_id, String pseudo, String photo_profil) {
-        this.profil_id = profil_id;
+    public Profil(String pseudo, String photo_profil, String devise, List<Parcours> parcours) {
         this.pseudo = pseudo;
         this.photo_profil = photo_profil;
+        this.devise = devise;
+        this.parcours = parcours;
     }
+
+    public Profil(String pseudo) {
+        this.pseudo = pseudo;
+    }
+
+    // Getters & Setters
 
     public Long getProfil_id() {
         return profil_id;
@@ -53,6 +62,22 @@ public class Profil {
         this.photo_profil = photo_profil;
     }
 
+    public String getDevise() {
+        return devise;
+    }
+
+    public void setDevise(String devise) {
+        this.devise = devise;
+    }
+
+    public List<Parcours> getParcours() {
+        return parcours;
+    }
+
+    public void setParcours(List<Parcours> parcours) {
+        this.parcours = parcours;
+    }
+
     @Override
     public String toString() {
         return "Profil{" +
@@ -61,4 +86,6 @@ public class Profil {
                 ", photo_profil='" + photo_profil + '\'' +
                 '}';
     }
+
+
 }

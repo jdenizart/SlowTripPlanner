@@ -1,0 +1,17 @@
+<div id="headerWrapper">
+
+    <a class="headerElt" routerLink="/accueil">
+        <img id="logo" [src]="logoPath"/>
+    </a>
+
+    <nav class="headerElt">
+        <button mat-raised-button routerLink="/accueil">Accueil</button>
+        <button mat-raised-button routerLink="/profil">Profil</button>
+        <button mat-raised-button routerLink="/parcours">Ajout parcours</button>
+    </nav>
+    
+    <a class="headerElt" routerLink="/profil">
+        <img id="thumbnail" [src]="profilePicUrl"/>
+    </a>
+
+</div>

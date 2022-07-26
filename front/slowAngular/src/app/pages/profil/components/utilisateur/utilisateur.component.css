@@ -1,0 +1,52 @@
+#container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #E6E6E6;
+    padding: 20px;
+}
+
+#userInfos {
+    text-align: center;
+}
+
+img {
+    width: 150px;
+    clip-path:ellipse(33% 50%);
+    margin: 15px;
+}
+
+#pseudo {
+    text-transform: uppercase;
+}
+
+q {
+    font-style: italic;
+}
+
+#crud {
+    margin: 30px;
+    padding-left: 30%;
+    border-top: 1px solid black;
+}
+
+.undecorated {
+    list-style-type: none;
+}
+
+mat-nav-list a {
+    color: #018068;
+}
+
+mat-nav-list span {
+    text-align: center;
+}
+
+#leftAside {
+    width: 40%;
+}
+
+#rightAside {
+    width: 58%;
+    padding: 15px;
+    border-left: 1px solid black;
+}
