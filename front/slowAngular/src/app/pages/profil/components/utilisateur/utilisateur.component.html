@@ -27,6 +27,7 @@
 
         <ul *ngFor="let Parcours of l_parcours; let i = index">
             <li class="undecorated">{{i+1}}</li>
+            <img [src]="Parcours.imgUrl" alt="miniature_parcours"/>
             <li>{{Parcours.nom}}</li>
             <li>{{Parcours.description}}</li>
         </ul>

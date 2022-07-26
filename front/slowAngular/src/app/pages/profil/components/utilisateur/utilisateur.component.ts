@@ -26,13 +26,15 @@ export class UtilisateurComponent implements OnInit {
       nom: "Mon 1er Parcours",
       description: "Lille-Amsterdam",
       champ1: "champ1",
-      champ2: "champ2"
+      champ2: "champ2",
+      imgUrl: "https://cdn.discordapp.com/attachments/1000052959654191154/1000053184045252688/jakob-owens-CiUR8zISX60-unsplash.jpg"
     },
     {
       nom: "Le second Parcours",
       description: "Amiens-Bruxelles",
       champ1: "champ1",
-      champ2: "champ2"
+      champ2: "champ2",
+      imgUrl: "https://cdn.discordapp.com/attachments/1000052959654191154/1000053184796045422/jorge-luis-ojeda-flota-FqtgyYgBLyQ-unsplash.jpg"
     }
   ];
 
