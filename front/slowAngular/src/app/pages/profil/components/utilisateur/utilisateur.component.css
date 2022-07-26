@@ -9,9 +9,9 @@
     text-align: center;
 }
 
-img {
+#userInfos img {
     width: 150px;
-    clip-path:ellipse(33% 50%);
+    clip-path:ellipse(50% 50%);
     margin: 15px;
 }
 
@@ -31,6 +31,7 @@ q {
 
 .undecorated {
     list-style-type: none;
+    border-top: 1px solid black;
 }
 
 mat-nav-list a {
@@ -49,4 +50,8 @@ mat-nav-list span {
     width: 58%;
     padding: 15px;
     border-left: 1px solid black;
+}
+
+#rightAside img {
+    width: 150px;
 }

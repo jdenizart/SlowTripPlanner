@@ -22,7 +22,7 @@
     margin-left: auto;
     display: block;
     height: 75px;
-    clip-path:ellipse(33% 50%);
+    clip-path:ellipse(50% 50%);
 }
 
 button {
