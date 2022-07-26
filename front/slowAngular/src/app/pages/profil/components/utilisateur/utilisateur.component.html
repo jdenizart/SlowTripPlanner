@@ -13,9 +13,9 @@
             <h2>Options</h2>
             <mat-nav-list>
                 <a mat-list-item routerLink="/parcours">Ajouter un parcours</a>
-                <a mat-list-item href="">Modifier</a>
-                <a mat-list-item href="">Supprimer</a>
-            </mat-nav-list>
+                <!--<a mat-list-item href="">Modifier</a>
+                <a mat-list-item href="">Supprimer</a>-->
+            </mat-nav-list> 
 
         </section>
 
@@ -24,10 +24,11 @@
     <aside id="rightAside">
         <!-- Affichage dynamique des parcours enregistrés du profil actif -->
         <h2>Mes Parcours</h2>
-        <ul *ngFor="let profil of profils; let i = index">
+        <ul *ngFor="let parcour of l_parcours; let i = index">
             <li class="undecorated">{{i+1}}</li>
-            <li>{{profil.photo_profil}}</li>
-            <li>{{profil.pseudo}}</li>
+            <!--<img [src]="l_parcours.imgUrl" alt="miniature_parcours"/> -->
+            <!--<li>{{Parcours.nom}}</li>-->
+            <!--<li>{{Parcours.description}}</li>-->
         </ul>
 
     </aside>
