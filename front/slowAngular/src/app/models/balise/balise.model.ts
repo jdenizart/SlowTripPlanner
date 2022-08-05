@@ -1,9 +1,9 @@
 export class Balise {
     constructor(
-        public balise_id:any,
+        public balise_id:number,
         public nomBalise: string,
         public dateTime: Date,
-        public distance: any,
+        public distance: number,
         public estVerrouille: boolean,
         
     ){}
