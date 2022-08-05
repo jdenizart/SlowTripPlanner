@@ -28,7 +28,7 @@ public class ProfilController {
         return this.profilService.findAll();
     }
 
-    @GetMapping("/pseudo/{pseudo}")
+    @GetMapping("/{pseudo}")
     @ResponseStatus(code = HttpStatus.OK)
     public List<Profil> findByPseudo(@PathVariable String pseudo){
         return this.profilService.findByPseudo(pseudo);
