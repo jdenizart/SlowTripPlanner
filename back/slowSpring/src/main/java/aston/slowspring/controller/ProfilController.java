@@ -11,12 +11,12 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 @RestController
-<<<<<<< HEAD
-@RequestMapping("/points")
+
+
 @CrossOrigin("http://localhost:4200")
-=======
+
 @RequestMapping("/profils")
->>>>>>> dev
+
 public class ProfilController {
     @Autowired
     private ProfilService profilService;
