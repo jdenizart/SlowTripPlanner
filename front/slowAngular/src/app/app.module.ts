@@ -47,6 +47,7 @@ import { UtilisateurComponent } from './pages/profil/components/utilisateur/util
 import { HttpClientModule } from '@angular/common/http';
 import { BaliseService } from './services/balise/balise.service';
 import { ProfilFormulaireComponent } from './pages/profil/components/profil-formulaire/profil-formulaire.component';
+import { ProfilsComponent } from './pages/profil/components/profils/profils.component';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { ProfilFormulaireComponent } from './pages/profil/components/profil-form
     HeaderComponent,
     AccueilComponent,
     UtilisateurComponent,
-    ProfilFormulaireComponent
+    ProfilFormulaireComponent,
+    ProfilsComponent
   ],
   imports: [
     BrowserModule,

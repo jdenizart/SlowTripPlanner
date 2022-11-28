@@ -20,7 +20,7 @@ export class ProfilFormulaireComponent implements OnInit {
     photo_profil: [''],
     devise: ['']
     // On déclare ici un tableau de FormArray
-    // Dans lequel on ajoute un control pour un téléphone
+   
   } );
 
   public addProfil(): void {
