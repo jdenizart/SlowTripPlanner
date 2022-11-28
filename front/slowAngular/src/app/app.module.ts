@@ -44,6 +44,10 @@ import { MapComponent } from './pages/parcours/components/map/map.component';
 import { HeaderComponent } from './commons/header/header.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { UtilisateurComponent } from './pages/profil/components/utilisateur/utilisateur.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BaliseService } from './services/balise/balise.service';
+import { ProfilFormulaireComponent } from './pages/profil/components/profil-formulaire/profil-formulaire.component';
+import { ProfilsComponent } from './pages/profil/components/profils/profils.component';
 
 
 @NgModule({
@@ -60,7 +64,9 @@ import { UtilisateurComponent } from './pages/profil/components/utilisateur/util
     MapComponent,
     HeaderComponent,
     AccueilComponent,
-    UtilisateurComponent
+    UtilisateurComponent,
+    ProfilFormulaireComponent,
+    ProfilsComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +92,8 @@ import { UtilisateurComponent } from './pages/profil/components/utilisateur/util
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

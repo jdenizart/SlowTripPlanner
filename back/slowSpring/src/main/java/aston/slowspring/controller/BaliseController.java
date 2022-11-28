@@ -23,7 +23,7 @@ public class BaliseController {
       return this.baliseService.findAll();
     }
 
-    @GetMapping("/nomBalise/{nomBalise}")
+    @GetMapping("/{nomBalise}")
     @ResponseStatus(code = HttpStatus.OK)
     public List<Balise> findByNomBalise(@PathVariable String nomBalise){
         return this.baliseService.findByNomBalise(nomBalise);
@@ -47,6 +47,7 @@ public class BaliseController {
     @DeleteMapping("/{balise_id}")
     @ResponseStatus(code=HttpStatus.ACCEPTED)
     public Balise delete(@PathVariable Long balise_id) {
+
         return this.baliseService.delete(balise_id);
     }
 

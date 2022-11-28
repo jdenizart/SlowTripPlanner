@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from "@angular/platform-browser";
+import { Profil } from 'src/app/models/profil/profil.model';
+import { ProfilService } from 'src/app/services/profil/profil.service';
 
 @Component({
   selector: 'app-utilisateur',
@@ -12,12 +13,17 @@ export class UtilisateurComponent implements OnInit {
   pseudo: string = "Lesma";
   devise: string = "Ce n'est pas la destination qui compte, mais le voyage !";
 
-  constructor(private titleService:Title) {
-    this.titleService.setTitle("Slow - profil");
-  }
+  profils: Profil[] = [];
+  constructor(private profilService:ProfilService) { }
 
   ngOnInit(): void {
+    this.profilService.getProfils()
+    .subscribe(data=>this.profils=data);
   }
+
+  
+  
+
 
   // Pour test. A supprimer à terme :
   l_parcours: any[] =
@@ -37,5 +43,6 @@ export class UtilisateurComponent implements OnInit {
       imgUrl: "https://cdn.discordapp.com/attachments/1000052959654191154/1000053184045252688/jakob-owens-CiUR8zISX60-unsplash.jpg"
     }
   ];
+
 
 }

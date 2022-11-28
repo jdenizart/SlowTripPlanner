@@ -10,10 +10,17 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+
+
+
+
+
+
 @RestController
 
 
 @CrossOrigin("http://localhost:4200")
+
 
 @RequestMapping("/profils")
 
@@ -28,7 +35,7 @@ public class ProfilController {
         return this.profilService.findAll();
     }
 
-    @GetMapping("/pseudo/{pseudo}")
+    @GetMapping("/{pseudo}")
     @ResponseStatus(code = HttpStatus.OK)
     public List<Profil> findByPseudo(@PathVariable String pseudo){
         return this.profilService.findByPseudo(pseudo);
@@ -43,6 +50,7 @@ public class ProfilController {
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.CREATED)
     public Profil create(@RequestBody Profil newProfil) {
+
         return this.profilService.create(newProfil);
     };
 

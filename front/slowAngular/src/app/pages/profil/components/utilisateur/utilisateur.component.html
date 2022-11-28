@@ -24,12 +24,11 @@
     <aside id="rightAside">
         <!-- Affichage dynamique des parcours enregistrés du profil actif -->
         <h2>Mes Parcours</h2>
-
-        <ul *ngFor="let Parcours of l_parcours; let i = index">
+        <ul *ngFor="let parcour of l_parcours; let i = index">
             <li class="undecorated">{{i+1}}</li>
-            <img [src]="Parcours.imgUrl" alt="miniature_parcours"/>
-            <li>{{Parcours.nom}}</li>
-            <li>{{Parcours.description}}</li>
+            <!--<img [src]="l_parcours.imgUrl" alt="miniature_parcours"/> -->
+            <!--<li>{{Parcours.nom}}</li>-->
+            <!--<li>{{Parcours.description}}</li>-->
         </ul>
 
     </aside>

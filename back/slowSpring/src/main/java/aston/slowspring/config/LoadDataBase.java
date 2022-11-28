@@ -23,7 +23,7 @@ public class LoadDataBase {
 
         return args -> {
             //System.out.println("test"+emploiTempsRepo.save(emploiTemps));
-            //System.out.println("test"+feuilleEmargementRepo.save(feuilleEmargement));
+
             //System.out.println("test"+ baliseRepo.findAll());
             //System.out.println("test"+ parcoursService.findAll());
             //System.out.println("test"+ locomotionService.findAll());
